@@ -10,9 +10,9 @@ sudo apt upgrade
 sudo apt install intel-media-va-driver mesa-va-drivers mesa-utils alsa-base fastfetch htop picom picom-conf qalculate-qt usb-creator-kde lubuntu-restricted-extras gufw plasma-discover flatpak
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install org.mozilla.firefox
+flatpak install -y org.mozilla.firefox
 flatpak install com.spotify.Client
-flatpak install com.valvesoftware.Steam
+flatpak install -y com.valvesoftware.Steam
 
 #melhora shader
 echo "export AMD_VULKAN_ICD=RADV MESA_SHADER_CACHE_MAX_SIZE=12G" >> "$home/.profile"
