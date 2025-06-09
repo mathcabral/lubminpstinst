@@ -3,7 +3,7 @@
 sudo ufw enable
 
 sudo apt purge kwalletmanager qps vim
-sudo apt autoremove
+sudo apt autoremove -s
 
 sudo apt update
 sudo apt upgrade
