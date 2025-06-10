@@ -15,10 +15,11 @@ flatpak install org.mozilla.firefox com.github.tchx84.Flatseal com.spotify.Clien
 #melhora shader - dando erro
 echo "export AMD_VULKAN_ICD=RADV MESA_SHADER_CACHE_MAX_SIZE=12G" >> "$HOME/.profile"
 
+path = "$HOME/.config/fastfetch"
 mkdir -p ~/.config/fastfetch
 fastfetch --gen-config ~/.config/fastfetch/config.jsonc
+jq 'logo = {"source": "lubuntu"}' $path/config.jsonc > $path/temp.jsonc && mv $path/temp.jsonc $path/config.jsonc
 echo "fastfetch" >> "$HOME/.bashrc"
-jq 'logo = {"source": "lubuntu"}' $HOME/.config/fastfetch/config.jsonc > $HOME/.config/fastfetch/temp.jsonc && mv $HOME/.config/fastfetch/temp.jsonc $HOME/.config/fastfetch/config.jsonc
 
 sudo apt update
 sudo apt dist-upgrade -y
