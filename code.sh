@@ -16,7 +16,7 @@ flatpak install com.spotify.Client -y #estou na duvida se instalo o snap
 flatpak install com.valvesoftware.Steam -y
 
 #melhora shader - dando erro
-echo "export AMD_VULKAN_ICD=RADV MESA_SHADER_CACHE_MAX_SIZE=12G" >> "$home/.profile"
+echo "export AMD_VULKAN_ICD=RADV MESA_SHADER_CACHE_MAX_SIZE=12G" >> "$HOME/.profile"
 
 sudo apt update
 sudo apt dist-upgrade -y
@@ -28,4 +28,4 @@ echo "verificar o comando fastfetch, se nao aparecer o lubuntu tem que criar o a
 mkdir -p ~/.config/fastfetch
 fastfetch --gen-config ~/.config/fastfetch/config.jsonc
 adicionar no arquivo logo antes de modules -> "logo": {"source": "lubuntu"},
-para usar sempre que abrir um terminal -> echo "fastfetch" >> "$home/.bashrc" - adicionar fastfetch no final" #mesmo erro do shader
+para usar sempre que abrir um terminal -> echo "fastfetch" >> "$HOME/.bashrc" - adicionar fastfetch no final" #mesmo erro do shader
