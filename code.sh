@@ -11,7 +11,8 @@ sudo apt install intel-media-va-driver mesa-va-drivers mesa-utils alsa-base fast
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install org.mozilla.firefox -y
-flatpak install com.spotify.Client -y
+flatpak install flathub com.github.tchx84.Flatseal -y
+flatpak install com.spotify.Client -y #estou na duvida se instalo o snap
 flatpak install com.valvesoftware.Steam -y
 
 #melhora shader
