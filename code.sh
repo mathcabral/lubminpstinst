@@ -15,14 +15,16 @@ flatpak install org.mozilla.firefox com.github.tchx84.Flatseal com.spotify.Clien
 #melhora shader - dando erro
 echo "export AMD_VULKAN_ICD=RADV MESA_SHADER_CACHE_MAX_SIZE=12G" >> "$HOME/.profile"
 
+mkdir -p ~/.config/fastfetch
+fastfetch --gen-config ~/.config/fastfetch/config.jsonc
+echo "fastfetch" >> "$HOME/.bashrc"
+jq 'logo = {"source": "lubuntu"}' $HOME/.config/fastfetch/config.jsonc > $HOME/.config/fastfetch/temp.jsonc && mv $HOME/.config/fastfetch/temp.jsonc $HOME/.config/fastfetch/config.jsonc
+
 sudo apt update
 sudo apt dist-upgrade -y
 flatpak update
 sudo apt autoclean
 sudo apt autoremove
 
-echo "verificar o comando fastfetch, se nao aparecer o lubuntu tem que criar o arquivo de config com 
-mkdir -p ~/.config/fastfetch
-fastfetch --gen-config ~/.config/fastfetch/config.jsonc
-adicionar no arquivo logo antes de modules -> "logo": {"source": "lubuntu"},
-para usar sempre que abrir um terminal -> echo "fastfetch" >> "$HOME/.bashrc" - adicionar fastfetch no final" #mesmo erro do shader
+echo "adicionar no arquivo logo antes de modules -> "logo": {"source": "lubuntu"},"
+
