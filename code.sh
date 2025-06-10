@@ -27,5 +27,3 @@ flatpak update
 sudo apt autoclean
 sudo apt autoremove
 
-echo "adicionar no arquivo logo antes de modules -> "logo": {"source": "lubuntu"},"
-
