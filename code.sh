@@ -10,11 +10,7 @@ sudo apt upgrade -y
 sudo apt install intel-media-va-driver mesa-va-drivers mesa-utils alsa-base fastfetch zram-config htop picom picom-conf qalculate-qt usb-creator-kde gufw plasma-discover flatpak -y
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install org.mozilla.firefox -y
-flatpak install com.github.tchx84.Flatseal -y
-flatpak install com.spotify.Client -y #estou na duvida se instalo o snap
-flatpak install com.valvesoftware.Steam -y
-flatpak install com.valvesoftware.Steam.Utility.steamtinkerlaunch -y
+flatpak install org.mozilla.firefox com.github.tchx84.Flatseal com.spotify.Client com.valvesoftware.Steam com.valvesoftware.Steam.Utility.steamtinkerlaunch -y
 
 #melhora shader - dando erro
 echo "export AMD_VULKAN_ICD=RADV MESA_SHADER_CACHE_MAX_SIZE=12G" >> "$HOME/.profile"
