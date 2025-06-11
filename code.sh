@@ -9,7 +9,7 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install intel-media-va-driver mesa-va-drivers mesa-utils alsa-base fastfetch zram-config htop picom picom-conf qalculate-qt usb-creator-kde gufw plasma-discover flatpak gamemode -y
 
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo --system
 flatpak install org.mozilla.firefox com.github.tchx84.Flatseal com.spotify.Client com.valvesoftware.Steam com.valvesoftware.Steam.Utility.steamtinkerlaunch com.discordapp.Discord org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/24.08 org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/24.08 -y
 
 echo "export AMD_VULKAN_ICD=RADV MESA_SHADER_CACHE_MAX_SIZE=12G" >> "$HOME/.profile"
